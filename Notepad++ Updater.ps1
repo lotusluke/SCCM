@@ -1,19 +1,4 @@
 # Notepad++ Version Checker and Updater for SCCM
-# Logs to C:\Windows\Logs\Notepad++_Update.log
-
-#$LogPath = "C:\Windows\Logs"
-#$LogFile = "$LogPath\Notepad++_Update.log"
-
-#function Write-Log {
-#    param([string]$Message)
-#    $Timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-#    "$Timestamp - $Message" | Tee-Object -FilePath $LogFile -Append
-#}
-
-# Create log directory if it doesn't exist
-#if (!(Test-Path $LogPath)) {
-#    New-Item -ItemType Directory -Path $LogPath -Force | Out-Null
-#}
 
 try {
     #Write-Log "Starting Notepad++ version check..."
@@ -51,4 +36,5 @@ try {
 catch {
     #Write-Log "Error: $_"
     exit 1
+
 }
